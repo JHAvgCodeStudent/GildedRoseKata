@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-import pytest
 from gilded_rose import Item, GildedRose
-
-
 
 def test_generic_item_sell_in():
     name = "foo"
