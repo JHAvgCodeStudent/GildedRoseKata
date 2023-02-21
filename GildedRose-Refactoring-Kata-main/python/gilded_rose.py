@@ -9,7 +9,8 @@ class GildedRose(object):
         self.item_types = {
             "Aged Brie":Aged_Brie,
             "Backstage passes to a TAFKAL80ETC concert":Backstage_Pass,
-            "Sulfuras, Hand of Ragnaros":Base_Item
+            "Sulfuras, Hand of Ragnaros":Base_Item,
+            "Conjured":Conjured_Item
         }
 
     def update_quality(self):
@@ -67,6 +68,18 @@ class Generic_Item(Base_Item):
 
         if(self.item.sell_in < 0):
             self.item.quality -= 1
+
+        if(self.item.quality < 0):
+            self.item.quality = 0
+        return
+
+class Conjured_Item(Base_Item):
+    def update(self):
+        self.item.sell_in -= 1
+        self.item.quality -= 2
+
+        if(self.item.sell_in < 0):
+            self.item.quality -= 2
 
         if(self.item.quality < 0):
             self.item.quality = 0

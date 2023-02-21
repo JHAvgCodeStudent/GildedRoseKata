@@ -121,3 +121,33 @@ def test_backstage_passes_past_concert():
     gilded_rose.update_quality()
     assert items[0].sell_in == sell_in - 1
     assert items[0].quality == 0
+
+def test_conjured():
+    name = "Conjured"
+    sell_in = 5
+    quality = 10
+    items = [Item(name, sell_in, quality)]
+    gilded_rose = GildedRose(items)
+    gilded_rose.update_quality()
+    assert items[0].sell_in == sell_in - 1
+    assert items[0].quality == quality - 2
+
+def test_conjured_item_past_date():
+    name = "Conjured"
+    sell_in = -1
+    quality = 5
+    items = [Item(name, sell_in, quality)]
+    gilded_rose = GildedRose(items)
+    gilded_rose.update_quality()
+    assert items[0].sell_in == sell_in - 1
+    assert items[0].quality == quality - 4
+
+def test_conjured_item_zero_quality():
+    name = "Conjured"
+    sell_in = -1
+    quality = 0
+    items = [Item(name, sell_in, quality)]
+    gilded_rose = GildedRose(items)
+    gilded_rose.update_quality()
+    assert items[0].sell_in == sell_in - 1
+    assert items[0].quality == quality
