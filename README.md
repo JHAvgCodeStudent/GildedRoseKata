@@ -5,7 +5,7 @@
 ---
 
 ## GildedRoseKata
-Refactoring kata called the Gilded Rose for writing unit tests. 
+Refactoring kata called the Gilded Rose for writing unit tests in Python as the chosen language. 
 
 ## Tools for Collaboration 
 GitHub will be used for the source control and final repo hosting
@@ -14,12 +14,18 @@ IDE: Visual Studio Code
 
 Testing Framework: PyTest
 
-The language the team chose to use is Python 
+Coverage: Coverage.py
 
 ## Videos
 
-Video of the group writing unit tests to cover the normal behavior of the application: 
-Video of the group refactoring code smells:
+Mob 1 & 2: 
+ - This video incudes the project setup, unit testing for recognition of code behavior, and the start of code refactoring: https://youtu.be/-Sb7kGpavyE & https://youtu.be/iAGG7hMt1iQ
+
+Mob 3:
+ - This video includes more refactoring, testing, and the removal of code smells for clean code: https://youtu.be/OcvXs9hzRIU
+ 
+Mob 4:
+- Video includes the addition of new features to the Gilded Rose Kata and final testing phases of the previous steps: https://youtu.be/uaysjGlOGqo
 
 
 ## Team 1 Members:
